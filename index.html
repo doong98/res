@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 뷰포트(viewport) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- swiper.css cdn으로 연결 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <!-- 사용자 정의 css 연결 -->
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <!-- 파비콘 넣기 -->    
+    <link rel="shortcut icon" href="img/favicon.png" type="image/icon">
+    <!-- 제이쿼리 라이브러리 연결 -->
+    <script src="js/jquery-3.7.1.js"></script>
+    <!-- swiper.js cdn으로 연결 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- gsap 플러그인 연결 -->
+    <script src="js/gsap.min.js"></script>
+    <!-- 사용자 정의 js 연결 -->
+    <script src="js/main.js"></script>
+    <title>국립중앙박물관</title>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="center">
+                <!-- 로고 -->
+                <div class="logo">
+                    <a href="index.html"> </a>
+                </div>
+                <!-- 내비게이션 -->
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">관람 정보</a>
+                            <ul class="sub">
+                                <li><a href="#">관람 안내</a></li>
+                                <li><a href="#">전시 해설</a></li>
+                                <li><a href="#">예약하기</a></li>
+                                <li><a href="#">관람·편의시설</a></li>
+                                <li><a href="#">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">전시</a>
+                            <ul class="sub">
+                                <li><a href="#">상설 전시</a></li>
+                                <li><a href="#">특별 전시</a></li>
+                                <li><a href="#">온라인 전시</a></li>
+                                <li><a href="#">국외 전시</a></li>
+                                <li><a href="#">전시도록</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">교육</a>
+                            <ul class="sub">
+                                <li><a href="#">학술·출판</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">문화행사</a>
+                            <ul class="sub">
+                                <li><a href="#">소식·참여</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">소장품</a>
+                            <ul class="sub">
+                                <li><a href="#">추천 소장품</a></li>
+                                <li><a href="#">소장품 검색</a></li>
+                                <li><a href="#">국보·보물 검색</a></li>
+                                <li><a href="#">3D 데이터 검색</a></li>
+                                <li><a href="#">음성 안내</a></li>
+                                <li><a href="#">소장품 대여 안내</a></li>
+                                <li><a href="#">문화재 기증 안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">박물관 소개</a>
+                            <ul class="sub">
+                                <li><a href="#">인사말</a></li>
+                                <li><a href="#">비전과 전략</a></li>
+                                <li><a href="#">조직 및 업무</a></li>
+                                <li><a href="#">시설 소개</a></li>
+                                <li><a href="#">수장고</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- 다국어지원,메뉴버튼 -->
+                <div class="top_menu">
+                    <ul>
+                        <li><a href="#">
+                            <svg aria-labelledby="languageIconTitle" color="#2329D6" class="lang" fill="none" height="100%" role="img" stroke="#ffffff" stroke-linecap="square" stroke-linejoin="miter" stroke-width="1" viewBox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg"><title id="languageIconTitle"/><circle cx="12" cy="12" r="10"/><path d="M12,22 C14.6666667,19.5757576 16,16.2424242 16,12 C16,7.75757576 14.6666667,4.42424242 12,2 C9.33333333,4.42424242 8,7.75757576 8,12 C8,16.2424242 9.33333333,19.5757576 12,22 Z" stroke-linecap="round"/><path d="M2.5 9L21.5 9M2.5 15L21.5 15" stroke-linecap="round"/></svg>
+                        </a></li>
+                        <li><a href="#" class="menu_btn">
+                            <svg style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path class="st0" d="M4.949,6.996h22.192 M4.949,15.996h22.192 M4.949,24.996h22.192"/></svg>                            
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 서브메뉴 배경 -->
+            <div class="sub_bg"></div>
+        </header>
+        <section class="sec1">
+            <!-- 메인 슬라이드 - swiper plugin -->
+            <div class="swiper main">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide s1">
+                    <h1>십장생, 10가지 이야기</h1>
+                    <p>재미난 옛날 이야기</p>
+                  </div>
+                  <div class="swiper-slide s2">
+                    <h1>그리스가 로마에게</h1>
+                    <p>로마가 그리스에게</p>
+                  </div>
+                  <div class="swiper-slide s3">
+                    <h1>부처의 뜰</h1>
+                    <p>청양 장곡사 괘불</p>
+                  </div>                  
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              </div>
+        </section>
+        <section class="sec2 scrollSet">
+            <div class="center">
+                <div class="time ani firstAni">
+                    <h2>관람시간</h2>
+                    <p>월/화/목/금/일 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10:00 ~ 18:00</p>
+                    <p>수/토 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10:00 ~ 21:00</p>
+                    <i>입찰 마감은 폐관 30분 전까지</i>
+                    <hr>
+                    <h2>관람료 무료 - <span>특별 전시는 유료</span></h2>
+                    <button type="button">
+                        <a href="#">자세히 보기</a>
+                    </button>
+                </div>
+                <div class="road ani secondAni">
+                    <h2>오시는 길</h2>
+                    <p>04383 서울시 용산구 서빙고로 137<br>
+                    (용산동6가 168-6)</p>
+                    <i>02-2077-9000</i>
+                    <hr>
+                    <h2>예약하러 가기</h2>
+                    <button type="button">
+                        <a href="#">자세히 보기</a>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="sec3 scrollSet">
+            <div class="center">
+                <div class="content ani firstAni">
+                    <h2>현재 전시중</h2>
+                    <p>2020년 ~ 2024년까지 다양한 전시가 있습니다!</p>
+                    <button type="button">
+                        <a href="#">자세히 보기</a>
+                    </button>
+                </div>
+                <!-- .sec3 swiper slide (현재 전시중)-->
+                <div class="swiper exhibit ani secondAni">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="image img1"></div>
+                            <h3>애중愛重, 아끼고 사랑한 그림 이야기</h3>
+                            <p>2023-09-15~2023-12-10</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image img2"></div>
+                            <h3>한국 채색화의 흐름 : 꽃과 새, 곁에 두고 즐기다</h3>
+                            <p>2023-08-29~2023-11-05</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image img3"></div>
+                            <h3>고故 이건희 회장 기증 국립청주박물관 특별전</h3>
+                            <p>2023-07-25~2023-10-29</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image img4"></div>
+                            <h3>백제 명품,<br>백제 문양전</h3>
+                            <p>2023-05-16~2024-03-29</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image img5"></div>
+                            <h3>문화재를 지키는 박물관 사람들</h3>
+                            <p>2021-12-21~2024-12-31</p>
+                        </div>                        
+                    </div><!--swiper-wrapper end--> 
+                    <!-- pagination progress -->
+                    <div class="swiper-pagination"></div>                   
+                </div><!--swiper end-->
+                <!-- prev버튼, next버튼 -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>                
+            </div> <!--center end-->
+        </section>
+        <section class="sec4 scrollSet">
+            <div class="center">
+                <div class="content ani firstAni">
+                    <h2>알립니다</h2>
+                    <p>국립중앙박물관의 다양한 소식을 만나보세요!</p>
+                    <button type="button">
+                        <a href="#">자세히 보기</a>
+                    </button>
+                </div>
+                <!-- swiper slide (현재 전시중)-->
+                <div class="swiper notice ani secondAni">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="image img1"></div>
+                            <h3>국립중앙박물관 누리집 이용자 만족도 조사</h3>
+                            <p>2023-09-11~2023-09-24</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image img2"></div>
+                            <h3>아하! 발견과 공감 어린이 박물관</h3>
+                            <p>상설전시</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image img3"></div>
+                            <h3>문화체육관광 분야 디지털혁신 공모전</h3>
+                            <p>2023-09-12~2023-10-20</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image img4"></div>
+                            <h3>스마트폰 전시안내 앱 서비스</h3>
+                            <p>App Store 무료</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="image img5"></div>
+                            <h3>대표 유물 해설<br><span>Museum Highlights Tour</span></h3>
+                            <p>평일 10시 30분, 13시, 15시</p>
+                        </div>
+                    </div><!--swiper-wrapper-->                    
+                    <!-- pagination progress -->
+                    <div class="swiper-pagination"></div>
+                </div><!--swiper end-->
+                <!-- prev버튼, next버튼 -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div><!--center end-->
+        </section>
+        <section class="sec5 scrollSet">
+            <div class="center">
+                <div class="content ani firstAni">
+                    <h2>2023년 사용자 조사 통계</h2>
+                    <p>2023년도 국립중앙박물관 고객만족도 조사 결과입니다.</p>
+                    <div class="graph">
+                        <img src="img/graph2.png" alt="graph">
+                    </div>
+                </div>
+                <div class="statis ani secondAni" id="count-area">
+                    <ul>
+                        <li>
+                            <img src="img/statistics_icon1.png" alt="statis">
+                            <p>앱 서비스 만족도 조사</p>
+                            <div class="count">
+                                <span class="num" id="count-item1">1220</span>
+                                <b>명</b>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/statistics_icon2.png" alt="statis">
+                            <p>앱 서비스 사용자 통계</p>
+                            <div class="count">
+                                <span class="num" id="count-item2">2480</span>
+                                <b>명</b>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/statistics_icon3.png" alt="statis">
+                            <p>홈페이지 방문자 통계</p>
+                            <div class="count">
+                                <span class="num" id="count-item3">8312</span>
+                                <b>명</b>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/statistics_icon4.png" alt="statis">
+                            <p>원고 모집 통계</p>
+                            <div class="count">2023년
+                                <span class="num" id="count-item4">168</span>
+                                <b>권</b>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        <section class="sec6 scrollSet">
+            <div class="center">
+                <div class="content ani firstAni">
+                    <h2>온라인 전시관</h2>
+                    <p>세계문화관 인도·동남아시아실-인간을 닮은 신들의 세계<br>
+                        세계문화관-중앙아시아실<br>
+                        어느 수집가의 초대-고故 이건희 회장 기증 1주년 기념전<br>
+                        조선의 승려 장인<br>
+                        조선 사람들의 꿈, 평생도<br>
+                        중국 고대 청동기 - 신에서 인간으로<br>
+                        시대의 얼굴, 셰익스피어에서 에드 시런까지
+                    </p>
+                    <button type="button">
+                        <a href="#">자세히 보기</a>
+                    </button>
+                </div><!--content-->
+                <div class="online">
+                    <ul>
+                        <li class="on1 ani ani1"><a href="#">세계문화관 인도·동남아시아실-인간을 닮은 신들의 세계</a></li>
+                        <li class="on2 ani ani2"><a href="#">세계문화관-중앙아시아실</a></li>
+                        <li class="on3 ani ani3"><a href="#">어느 수집가의 초대-고故 이건희 회장 기증 1주년 기념전</a></li>
+                        <li class="on4 ani ani4"><a href="#">조선의 승려 장인</a></li>
+                        <li class="on5 ani ani5"><a href="#">조선 사람들의 꿈, 평생도</a></li>
+                        <li class="on6 ani ani6"><a href="#">중국 고대 청동기 - 신에서 인간으로</a></li>
+                        <li class="on7 ani ani7"><a href="#">시대의 얼굴, 셰익스피어에서 에드 시런까지</a></li>
+                        <li class="on8 ani ani8"><a href="#">가족뮤지컬&lt;드래곤 하이&gt;</a></li>
+                        <li class="on9 ani ani9"><a href="#">영원한 여정, 특별한 동행</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="center">
+                <div class="footer1">
+                    <div class="f_logo">
+                        <img src="img/f_logo.png" alt="logo">
+                    </div> 
+                    <div class="info">
+                    <ul>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">영상정보처리기기 운영·관리 규정</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">전자민원</a></li>
+                        <li><a href="#">공공데이터개방</a></li>
+                        <li><a href="#">저작권정책</a></li>
+                        <li><a href="#">클린신고센터</a></li>
+                        <li><a href="#">찾아오시는 길</a></li>
+                    </ul>
+                    </div>
+                    <address>
+                    04383 서울시 용산구 서빙고로 137(용산동6가 168-6)<br>
+                    대표전화 : 02-0277-9000
+                    </address>
+                    <p>&copy;National Museum of Korea.</p>
+                </div><!--footer1-->
+                <div class="footer2">
+                    <div class="family_site">
+                        <a href="#">Family Site</a>
+                        <div class="family_list">
+                            <ul>
+                                <li><a href="#">어린이 박물관</a></li>
+                                <li><a href="#">교육플랫폼 모두</a></li>
+                                <li><a href="#">학예사 자격증</a></li>
+                                <li><a href="#">e뮤지엄</a></li>
+                                <li><a href="#">외규장각 의궤 원문</a></li>
+                                <li><a href="#">박물관 신문</a></li>
+                                <li><a href="#">문화상품점</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sns">
+                        <ul>
+                            <li><a href="#">
+                                <img src="img/naver.png" alt="naver">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/twitter.png" alt="twitter">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/facebook.png" alt="facebook">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/naver.png" alt="naver">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/instagram.png" alt="instagram">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/youtube.png" alt="youtube">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/audioclip.png" alt="audioclip">
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- top button -->
+    <div class="top">
+        <a href="#">
+            <img src="img/arrow_up_icon.png" alt="up arrow">
+        </a>
+    </div>
+    
+    <script>
+        //sec5영역의 count animation
+        // 카운팅 애니메이션 함수
+    function count(element, start, end, duration) {
+        let current = start;
+        const range = end - start;
+        const increment = range / (duration / 10);
+        const stepTime = 50; // 10ms 마다 증가하도록 설정
+
+        let timer = setInterval(function() {
+            current += increment;
+            if (current >= end) {
+                clearInterval(timer);
+                current = end;
+            }
+            element.textContent = formatNumber(current, end);
+        }, stepTime);
+    }
+
+    function formatNumber(number, end) {
+        if (Number.isInteger(end)) {
+            return number.toFixed(0).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+        } else {
+            return number.toFixed(1);
+        }
+    }
+
+    // 스크롤 이벤트 리스너
+    window.addEventListener('scroll', function() {
+        const countArea = document.getElementById('count-area');
+        const countAreaPosition = countArea.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight;
+
+        if (countAreaPosition < screenPosition / 2) { // 요소가 반이상 보였을 때 실행
+
+            const count1 = document.getElementById('count-item1');
+            count(count1, 0, 1220, 300);
+
+            const count2 = document.getElementById('count-item2');
+            count(count2, 0, 2480, 300);
+
+            const count3 = document.getElementById('count-item3');
+            count(count3, 0, 8312, 300);
+
+            const count4 = document.getElementById('count-item4');
+            count(count4, 0, 168, 300);
+
+            // 이벤트 리스너 삭제
+            window.removeEventListener('scroll', arguments.callee);
+        }
+    });
+    </script>
+    <script>
+        // 브라우저 해상도가 변경되면 미디어 쿼리 적용하기
+        // 또는 브라우저를 확대, 축소해도 홈페이지 비율 유지하기
+
+        // resize() 메서드 이용
+        // 글자크기, padding, margin 의 단위를 rem 사용하기
+        // rem:root 가로크기 기준(root == window)
+        (function($) {
+            $.AdjustZoom = function(options) {
+            var option = { zoomRatio : 100 };
+            $.extend(option, options);
+            // 브라우저 배율이 100% 가 아닌 경우 처리
+            if(screen.logicalXDPI != screen.deviceXDPI) {
+                try {
+                //alert(screen.availWidth+", "+screen.logicalXDPI+", "+screen.deviceXDPI);
+                        var ratio = screen.logicalXDPI / screen.deviceXDPI;
+                        var ratio_reverse = screen.deviceXDPI / screen.logicalXDPI;
+                        $('body').css('zoom', ( ratio * option.zoomRatio)+'%');
+                        $('body').width(screen.availWidth * ratio_reverse );
+            }catch (e) {
+                alert("브라우저 배율 보정 중 오류가 발생하였습니다. 창을 닫은 후 다시 열어 주시기 바랍니다.");
+            }
+        }
+    };
+    })(jQuery);
+    </script>
+
+</body>
+</html>
